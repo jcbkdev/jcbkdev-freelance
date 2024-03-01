@@ -11,6 +11,15 @@
 
 body {
   font-family: "Inter", sans-serif;
+  margin: 0 30px;
+  color: var(--color-dark);
+}
+
+.gradient-text {
+  background: linear-gradient(-50deg, #1D254E 0%, #5772FF 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .nav {
@@ -45,8 +54,9 @@ body {
   font-weight: 500;
   font-size: 18px;
   color: var(--color-white);
-  width: 8rem;
-  height: 3rem;
+  width: fit-content;
+  height: fit-content;
+  padding: 1rem 2rem;
   background-color: var(--color-dark);
   border: none;
   border-radius: 1rem;
@@ -65,5 +75,5 @@ body {
 .btn:active {
   background-color: var(--color-white);
   color: var(--color-dark);
-  border: 2px solid var(--color-dark);
+  outline: 2px solid var(--color-dark);
 }

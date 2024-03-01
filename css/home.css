@@ -1,0 +1,51 @@
+body {
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+}
+
+.hero-content {
+  display: flex;
+  height: 600px;
+  gap: 2rem;
+  border-radius: 2rem;
+}
+
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  width: min-content;
+  padding: 2rem 0;
+}
+
+.hero-text-h1 {
+  font-size: 4rem;
+  font-weight: 800;
+  line-height: .7;
+  margin: 0;
+}
+
+.hero-text-under {
+  font-size: 2.8rem;
+}
+
+.hero-desc {
+  font-size: 18px;
+  font-weight: 500;
+  max-width: 70%;
+  line-height: 1.25;
+}
+
+/* TODO: animate the video */
+.hero-video {
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2rem;
+}
+
+.hero-video video {
+  height: 130%;
+}
