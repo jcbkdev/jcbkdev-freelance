@@ -23,6 +23,14 @@ body {
   -webkit-text-fill-color: transparent;
 }
 
+.gradient-bg {
+  background: linear-gradient(-50deg, #1D254E 0%, #5772FF 100%);
+}
+
+.text-superbold {
+  font-weight: 900;
+}
+
 .nav {
   display: flex;
   justify-content: space-between;

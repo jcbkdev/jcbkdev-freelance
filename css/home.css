@@ -120,3 +120,54 @@ body {
 
   color: white;
 }
+
+.steps-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.steps-headline {
+  font-size: 2.5vw;
+  font-weight: 700;
+}
+
+.steps {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 60vw;
+  justify-content: space-between;
+}
+
+.step {
+  display: flex;
+  width: max-content;
+  align-items: center;
+  gap: 1rem;
+}
+
+.step-count {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 80px;
+
+  border-radius: 24px;
+  color: var(--color-white);
+  font-size: 36px;
+  font-weight: 900;
+
+  box-shadow: 4px 4px 16px rgba(0, 0, 0, .4);
+}
+
+.step-text {
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--color-dark);
+}
+
+.steps-disclaimer {
+  font-size: 24px;
+  text-align: center;
+}
