@@ -231,3 +231,26 @@ body {
   font-size: 22px;
   font-weight: 500;
 }
+
+.ready-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  height: 600px;
+  width: 100%;
+  border-radius: 2rem;
+  color: white;
+  gap: 2rem;
+}
+
+.ready-headline {
+  font-size: 115px;
+  text-align: center;
+}
+
+.ready-section * {
+  font-weight: 700;
+  margin: 0;
+}
