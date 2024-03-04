@@ -3,6 +3,11 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="shortcut icon"
+            href="/assets/favicon.ico"
+            type="image/x-icon"
+        />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
@@ -11,7 +16,9 @@
         />
         <link rel="stylesheet" href="/css/index.css" />
         <link rel="stylesheet" href="/css/home.css" />
+        <link rel="stylesheet" href="/css/contact.css" />
         <script src="js/home.js"></script>
+        <script defer src="js/contact.js"></script>
         <title>JCBK</title>
     </head>
     <body>
@@ -24,7 +31,7 @@
                     ></span
                 >
             </div>
-            <button class="btn">ZAMÓW</button>
+            <button class="btn" onclick="openContact()">ZAMÓW</button>
         </div>
         <div class="content">
             <div class="hero">
@@ -42,7 +49,9 @@
                             profesjonalny design, by przyciągnąć uwagę klientów
                             od pierwszego kliknięcia!
                         </p>
-                        <button class="btn">ZAMÓW DARMOWĄ WYCENĘ</button>
+                        <button class="btn" onclick="openContact()">
+                            ZAMÓW DARMOWĄ WYCENĘ
+                        </button>
                     </div>
                     <div class="hero-video">
                         <video
@@ -153,11 +162,72 @@
                 <h2 class="ready-headline">
                     Gotowy wejść z nami w świat internetu?
                 </h2>
-                <button class="btn">ZAMÓW DARMOWĄ WYCENĘ</button>
+                <button class="btn" onclick="openContact()">
+                    ZAMÓW DARMOWĄ WYCENĘ
+                </button>
             </div>
         </div>
         <footer>
             <span>jcbk©2024</span>
         </footer>
+        <dialog id="contact-dialog" class="contact-dialog">
+            <form id="contact-form" action="">
+                <button
+                    type="button"
+                    class="contact-close"
+                    onclick="closeContact()"
+                >
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="36"
+                        height="36"
+                        viewBox="0 0 36 36"
+                        fill="none"
+                    >
+                        <path
+                            d="M3 3L18 18M33 33L18 18M18 18L33 3L3 33"
+                            stroke="#1E1E1E"
+                            stroke-width="6"
+                        />
+                    </svg>
+                </button>
+                <div class="contact-form-content">
+                    <div class="contact-info">
+                        <input
+                            id="input-name"
+                            type="text"
+                            class="input"
+                            maxlength="33"
+                            placeholder="Imię i Nazwisko"
+                        />
+                        <input
+                            id="input-email"
+                            type="email"
+                            class="input"
+                            placeholder="Adres e-mail"
+                        />
+                        <input
+                            id="input-phone"
+                            type="tel"
+                            class="input"
+                            placeholder="+48 numer telefonu"
+                        />
+                        <textarea
+                            id="input-business"
+                            class="input textarea-fill-h texteare-resize-off"
+                            placeholder="Opis twojego biznesu"
+                        ></textarea>
+                    </div>
+                    <div class="contact-details">
+                        <textarea
+                            id="input-desc"
+                            class="input textarea-fill-h textarea-fill-w texteare-resize-off"
+                            placeholder="Twoja wizja strony"
+                        ></textarea>
+                    </div>
+                </div>
+                <button class="btn btn-blue" type="submit">ZAMÓW</button>
+            </form>
+        </dialog>
     </body>
 </html>
