@@ -170,3 +170,10 @@ footer {
   width: 100%;
   border-top: 1px solid var(--color-blue);
 }
+
+@media only screen and (max-width: 700px) {
+  .btn {
+    font-size: 16px;
+    padding: 1rem 1rem;
+  }
+}

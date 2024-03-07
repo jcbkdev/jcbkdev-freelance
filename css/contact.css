@@ -71,3 +71,24 @@
 .contact-close:hover svg path {
   stroke: var(--color-dark-brighter);
 }
+
+.contact-small-screen {
+  display: none;
+  text-align: center;
+}
+
+@media only screen and (max-width: 1110px) {
+  .contact-form-content {
+    flex-direction: column;
+  }
+
+  .contact-info .input {
+    width: auto;
+  }
+
+
+  .contact-small-screen {
+    display: unset;
+  }
+
+}
