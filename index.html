@@ -171,7 +171,8 @@
             <span>jcbk©2024</span>
         </footer>
         <dialog id="contact-dialog" class="contact-dialog">
-            <form id="contact-form" action="">
+            <form id="contact-form">
+                <input type="hidden" name="_captcha" value="false" />
                 <button
                     type="button"
                     class="contact-close"
@@ -195,34 +196,44 @@
                     <div class="contact-info">
                         <input
                             id="input-name"
+                            name="name"
                             type="text"
                             class="input"
                             maxlength="33"
                             placeholder="Imię i Nazwisko"
+                            required
                         />
                         <input
                             id="input-email"
+                            name="email"
                             type="email"
                             class="input"
                             placeholder="Adres e-mail"
+                            required
                         />
                         <input
                             id="input-phone"
+                            name="phone-number"
                             type="tel"
                             class="input"
                             placeholder="+48 numer telefonu"
+                            required
                         />
                         <textarea
                             id="input-business"
+                            name="business-description"
                             class="input textarea-fill-h texteare-resize-off"
                             placeholder="Opis twojego biznesu"
+                            required
                         ></textarea>
                     </div>
                     <div class="contact-details">
                         <textarea
                             id="input-desc"
+                            name="website-description"
                             class="input textarea-fill-h textarea-fill-w texteare-resize-off"
                             placeholder="Twoja wizja strony"
+                            required
                         ></textarea>
                     </div>
                 </div>
