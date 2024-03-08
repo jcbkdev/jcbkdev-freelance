@@ -65,14 +65,34 @@ descInput.addEventListener("input", setStorage);
 
 const contactSubmit = (e) => {
     e.preventDefault();
+    const button = document.getElementById("contact-submit-btn");
+    button.disabled = true;
 
-    fetch("https://formsubmit.co/jcbkdev@gmail.com", {
-        referrer: "http://localhost:5500/",
-        body: `_captcha=false&name=${nameInput.value}&email=${emailInput.value}&phone-number=${phoneInput.value}&business-description=${businessInput.value}&website-description=${descInput.value}`,
+    fetch("https://formsubmit.co/ajax/jcbkdev@gmail.com", {
         method: "POST",
-        mode: "no-cors",
-        credentials: "omit",
-    });
+        headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+        },
+        body: JSON.stringify({
+            name: nameInput.value,
+            email: emailInput.value,
+            "phone-number": phoneInput.value,
+            "business-description": businessInput.value,
+            "website-description": descInput.value,
+        }),
+    })
+        .then((response) => response.status)
+        .then((status) => {
+            button.disabled = false;
+            contactDialog.close();
+            if (status == 200) {
+                // alert("git gud");
+            } else {
+                alert("Wystąpił problem. Wiadomość nie została wysłana.");
+            }
+        })
+        .catch((error) => console.log(error));
 };
 
 const form = document.getElementById("contact-form");

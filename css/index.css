@@ -122,6 +122,11 @@ body.stop>.content {
   color: var(--color-white);
 }
 
+.btn:disabled {
+  background-color: var(--color-inactive-input);
+  cursor: wait;
+}
+
 .input {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
