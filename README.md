@@ -1,2 +1,7 @@
 # JCBKdev website
-It is a source code of my freelancing website written without any frameworks (*and i partially regret it*).
+Website created as a part of my freelancing offer allowing users to contact me easily by using the contanct form.
+
+Written without any frameworks.<br/>
+`-HTML`<br/>
+`-CSS`<br/>
+`-JS`
